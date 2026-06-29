@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+
+<img src="better_video_player_logo_glow.svg" alt="Better Video Player logo" class="logo"/>
+
+<h1 class=title>Better Video Player 0.0.23</h1>
+
+<div class="links" id="links">
+	<a href="https://buymeacoffee.com/mrbooboostank" target="_blank">Buymeacoffee</a>
+	<a href="https://steamcommunity.com/tradeoffer/new/?partner=42559487&token=6es1eb07" target="_blank">Steam trade</a>
+	<a href="https://steamcommunity.com/profiles/76561198002825215/" target="_blank">Steam</a>
+	<a href="https://www.youtube.com/channel/UCIbpZJmfLIT2LjqIPdgTDWw" target="_blank">YouTube</a>
+	<a href="https://github.com/mrbooboostank/Better-Video-Player" target="_blank">GitHub</a>
+	<a href="asdf" target="_blank">Chrome Web Store</a>
+</div>
+
+<h2 class="subtitle">Options</h2>
+
+<div id="buttons">
+	<input type="checkbox" id="doAutoPlay" name="doAutoPlay">
+	<label for="doAutoPlay">Autoplay?</label><br>
+	
+	<input type="checkbox" id="doAudioTracks" name="doAudioTracks">
+	<label for="doAudioTracks">Play all audio tracks?</label><br>
+	
+	<input type="checkbox" id="showSubVideos" name="showSubVideos">
+	<label for="showSubVideos">Show audio track videos?</label><br>
+	
+	<input type="checkbox" id="doVolumeSaving" name="doVolumeSaving">
+	<label for="doVolumeSaving">Save audio track volumes?</label><br>
+	
+	<input type="checkbox" id="showVolumeControls" name="showVolumeControls">
+	<label for="showVolumeControls">Show volume controls?</label><br><br>
+	
+	<input type="button" id="resetVolumesButton" name="resetVolumesButton" value="Reset track volumes?"><br><br>
+	
+	<input type="checkbox" id="doLoop" name="doLoop">
+	<label for="doLoop">Loop?</label><br>
+	
+	<input type="checkbox" id="limitVideoZoom" name="limitVideoZoom">
+	<label for="limitVideoZoom">Limit video zoom?</label><br>
+	
+	<input type="checkbox" id="showControls" name="showControls">
+	<label for="showControls">Show controls?</label><br>
+	
+	<input type="checkbox" id="showSubControls" name="showSubControls">
+	<label for="showSubControls">Show controls on audio track videos?</label><br>
+	
+	<input type="checkbox" id="showSpeedControls" name="showSpeedControls">
+	<label for="showSpeedControls">Show speed controls?</label><br><br>
+	
+	<input type="number" step="0.25" min="0" max="16" style="width:49px" id="playbackSpeed" name="playbackSpeed">
+	<label for="playbackSpeed">Playback speed</label><br>
+	
+	<input type="number" step="0.05" min="0.05" max="16" style="width:49px" id="speedIncrements" name="speedIncrements">
+	<label for="speedIncrements">Speed increments</label><br>
+	
+	<input type="number" step="0.05" min="0.05" max="16" style="width:49px" id="sliderMinimum" name="sliderMinimum">
+	<label for="sliderMinimum">Slider minimum</label><br>
+	
+	<input type="number" step="0.05" min="0.05" max="16" style="width:49px" id="sliderMaximum" name="sliderMaximum">
+	<label for="sliderMaximum">Slider maximum</label><br>
+	
+	<input type="number" step="1" min="1" max="180" style="width:49px" id="defaultFPS" name="defaultFPS">
+	<label for="defaultFPS">Default FPS</label><br><br>
+	
+	<input type="checkbox" id="showFrameControls" name="showFrameControls">
+	<label for="showFrameControls">Show frame controls?</label><br>
+	
+	<input type="checkbox" id="hideCustomControls" name="hideCustomControls">
+	<label for="hideCustomControls">Hide custom controls when mouse leaves video?</label><br>
+	
+	<h2 class="subtitle">Keybinds</h2>
+	
+	<input type="text" id="keyFrameBack" name="keyFrameBack" maxlength="1" style="width:13px">
+	<label for="keyFrameBack">Frame back</label><br>
+	
+	<input type="text" id="keyFrameForward" name="keyFrameForward" maxlength="1" style="width:13px">
+	<label for="keyFrameForward">Frame forward</label><br>
+	
+	<input type="text" id="keyToggleZoom" name="keyToggleZoom" maxlength="1" style="width:13px">
+	<label for="keyToggleZoom">Toggle zoom</label><br>
+	
+	<input type="text" id="keySpeedUp" name="keySpeedUp" maxlength="1" style="width:13px">
+	<label for="keySpeedUp">Speed up</label><br>
+	
+	<input type="text" id="keySpeedDown" name="keySpeedDown" maxlength="1" style="width:13px">
+	<label for="keySpeedDown">Speed down</label><br>
+	
+	<input type="text" id="keySpeedReset" name="keySpeedReset" maxlength="1" style="width:13px">
+	<label for="keySpeedReset">Reset speed</label><br>
+	
+	<input type="text" id="keySpeed1x" name="keySpeed1x" maxlength="1" style="width:13px">
+	<label for="keySpeed1x">1x speed</label>
+</div>
+<script src="options.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+html {
+	min-width: 360px;
+	background-color: #0b2b1a;
+}
+
+body {
+	font-family: "Motiva Sans", Sans-serif;
+	color: #acb2b8;
+}
+
+.logo {
+	display: block;
+	margin: auto;
+	margin-top: 13px;
+	width: 40%;
+}
+
+/* Copied and modified from Steam artwork page "main.css" file */
+::selection {
+    background: #3ab464;
+    text-shadow: 1px 1px 2px #000000aa;
+    color: #fff
+}
+
+.title {
+	color: #fff;
+	text-align: center;
+	margin: 8px;
+	margin-bottom: 0px;
+}
+
+.subtitle {
+	text-transform: uppercase;
+	line-height: 26px;
+	color: #fff;
+	margin: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	letter-spacing: 0.03em;
+	font-weight: normal;
+	font-size: 14px;
+	background-image: url(https://store.fastly.steamstatic.com/public/images/v6/maincol_gradient_rule.png);
+	background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+a {
+	color: white;
+	font-size: 14px;
+}
+
+.links {
+	text-align: center;
+	margin-bottom: -2px;
+}
