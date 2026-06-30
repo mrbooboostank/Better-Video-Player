@@ -1,0 +1,11 @@
+smallPromo.png
+	Export from smallPromo.svg
+	Run png through pngcrush_1_8_11_w64
+	
+marqueePromo.png
+	Export from marqueePromo.svg
+	Run png through pngcrush_1_8_11_w64
+	
+screenshot_1.png
+	Export from screenshot_1.xcf as one layer without alpha
+	Run png through pngcrush_1_8_11_w64
