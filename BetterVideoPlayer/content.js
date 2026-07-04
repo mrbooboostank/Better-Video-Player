@@ -185,6 +185,26 @@ function processItems( items ) {
 		return Math.min(Math.max(number, min), max);
 	}
 	
+	// Apply a consistent offset to the volumeBox element
+	// The built-in volume UI changes sizes slightly when the video element has a width of 1440 or less
+	const volumeBoxPositioner = new ResizeObserver(entries => {
+		//DEV onsole.log( "Repositioning containers via observer!" )
+		for (let entry of entries) {
+			//const browserZoom = window.devicePixelRatio
+			const container = entry.target
+			const volumeBox = container.volumeBox
+			container.observerWidth = entry.contentBoxSize[0].inlineSize
+			if ( container.observerWidth > 1440) {
+				volumeBox.style = "width: 38px; position: absolute; top:100%; left:100%; transform: translate(-720%, -305%)"
+				//DEV onsole.log( "container above 1440 width" )
+			} else {
+				volumeBox.style = "width: 38px; position: absolute; top:100%; left:100%; transform: translate(-580%, -280%)"
+				//DEV onsole.log( "container below 1440 width" )
+			}
+		}
+	});
+	
+	
 	function createVolumeBox( attachVideo ) {
 		const volumeBox = document.createElement( 'input' );
 		volumeBox.classList.add( "volumeBox" )
@@ -201,9 +221,13 @@ function processItems( items ) {
 			 event.target.attachVideo.volume = volume / 100
 		})
 		
+		// Attach the observer to the overall video's container to properly watch for size changes
+		volumeBoxPositioner.observe( attachVideo.parentElement )
+		
 		attachVideo.volumeBox = volumeBox
 		volumeBox.attachVideo = attachVideo
 		attachVideo.parentElement.append( volumeBox )
+		attachVideo.parentElement.volumeBox = volumeBox
 		
 		// Keeps the volumeBox hidden states synced for the subVideos that may spawn at a later point in the page loading
 		volumeBox.hidden = document.getElementById( "buttonContainer" ).style.display == "none"
